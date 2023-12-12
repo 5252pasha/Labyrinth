@@ -16,18 +16,25 @@ fps = pygame.time.Clock()
 layout = pygame.image.load("background.jpg")
 layout = pygame.transform.scale(layout, (800, 500))
 
-drachilaN1 = character.Character(250, 250, 34, 37, 2.5, "hero.png")
-dubinaN1 = enemy.Enemy(110, 220, 49, 51, 10, "cyborg.png", 100, 200, 300, 300)
+drachilaN1 = character.Character(400, 150, 32, 35, 2, "hero.png")
+dubinaN1 = enemy.Enemy(110, 220, 45, 47, 4, "cyborg.png", 100, 200, 300, 300)
 gold = Gold(400, 450, 50, 50, "treasure.png")
 game = True
 
 walls = []
 walls.append(Wall(43, 47, 711, 21, (255, 255, 1)))
-walls.append(Wall(497, 134, 27, 331, (255, 90, 10)))
+walls.append(Wall(455, 238, 31, 201, (255, 90, 10)))
 walls.append(Wall(1, 488, 373, 14, (0, 25, 255)))
 walls.append(Wall(42, 46, 22, 404, (142, 242, 1)))
-walls.append(Wall(380, 395, 11, 111, (0, 72, 144)))
-walls.append(Wall(559, 455, 111, 111, (0, 255, 255)))
+walls.append(Wall(99, 101, 11, 388, (0, 72, 144)))
+walls.append(Wall(385, 238, 70, 200, (0, 255, 255)))
+walls.append(Wall(455, 105, 31, 93, (250, 90, 10)))
+walls.append(Wall(330, 67, 11, 383, (144, 25, 144)))
+walls.append(Wall(371, 238, 16, 262, (72, 200, 111)))
+walls.append(Wall(371, 67, 16, 131, (72, 200, 144)))
+walls.append(Wall(386, 188, 70, 10, (0, 72, 144)))
+walls.append(Wall(91, 101, 11, 388, (0, 72, 144)))
+walls.append(Wall(91, 101, 11, 388, (0, 72, 144)))
 while game:
 
     for event in pygame.event.get():
@@ -49,4 +56,4 @@ while game:
     for wall in walls:
         wall.render(window)
     pygame.display.flip()
-    fps.tick(90)
+    fps.tick(60)
